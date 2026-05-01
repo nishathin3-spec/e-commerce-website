@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern E-Commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="logo">
+                <span class="logo-text">Trolly.</span>
+            </div>
+            <ul class="nav-links">
+                <li class="item"><a href="#home">Home</a></li>
+                <li class="item"><a href="#services">Services</a></li>
+                <li class="item"><a href="#products-section">Products</a></li>
+                <li class="item"><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="cart-icon" id="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="home-content">
+            <h1 class="h-primary">Elevate Your Lifestyle</h1>
+            <p>Discover our exclusive collection of premium products. Quality meets modern design.</p>
+            <a href="#products-section" class="btn btn-primary">Shop Now</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h1 class="h-primary center section-title reveal">Our Services</h1>
+            <div class="services-grid">
+                <div class="box reveal">
+                    <i class="fas fa-truck service-icon"></i>
+                    <h2 class="h-secondary">Fast Delivery</h2>
+                    <p>Enjoy quick and reliable delivery right to your doorstep.</p>
+                </div>
+                <div class="box reveal delay-1">
+                    <i class="fas fa-undo service-icon"></i>
+                    <h2 class="h-secondary">Easy Returns</h2>
+                    <p>Hassle-free return policy within 30 days of purchase.</p>
+                </div>
+                <div class="box reveal delay-2">
+                    <i class="fas fa-headset service-icon"></i>
+                    <h2 class="h-secondary">24/7 Support</h2>
+                    <p>Our customer service team is always here to help you.</p>
+                </div>
+                <div class="box reveal delay-3">
+                    <i class="fas fa-money-bill-wave service-icon"></i>
+                    <h2 class="h-secondary">Cash on Delivery</h2>
+                    <p>Pay conveniently with Cash on Delivery at your doorstep.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products-section">
+        <div class="container">
+            <h1 class="h-primary center section-title reveal">Featured Products</h1>
+            <div id="products-grid" class="products-grid">
+                <!-- Products will be dynamically injected here by JS -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h1 class="h-primary center section-title text-white reveal">Contact Us</h1>
+            <p class="center text-white mb-40 reveal delay-1" style="font-size: 1.1rem; margin-bottom: 40px; color: #eee;">We'd love to hear from you. Please fill out the form below or reach out to us directly.</p>
+            <div class="contact-wrapper">
+                <div class="contact-info reveal delay-2">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-text">
+                            <h3>Our Location</h3>
+                            <p>123 Commerce Street, Tech Valley, CA 94043</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="info-text">
+                            <h3>Phone Number</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info-text">
+                            <h3>Email Address</h3>
+                            <p>support@trolly.com</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div id="contact-box" class="reveal delay-3">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" />
+                        </div>
+                        <div class="form-group">
+                            <textarea name="" id="" cols="20" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            <p>Copyright &copy; 2026 Trolly E-commerce. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Your Shopping Cart</h2>
+                <button class="close-btn" id="close-cart"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div id="cart-items">
+                    <!-- Cart items injected here -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="cart-total">
+                    <h3>Total:</h3>
+                    <h3 id="total-price">$0.00</h3>
+                </div>
+                <button id="checkout-btn" class="btn btn-primary w-100">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Form Modal -->
+    <div id="checkout-form-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Delivery Details</h2>
+                <button class="close-btn" id="close-checkout-form"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="delivery-form" class="checkout-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="chk-name" placeholder="Enter your full name" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="chk-phone" placeholder="Enter your phone number" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Address Details</label>
+                        <textarea id="chk-address" rows="3" placeholder="Enter your full delivery address"
+                            required></textarea>
+                    </div>
+
+                    <div class="payment-methods">
+                        <label class="payment-label">Select Payment Method:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="pay-cod" name="payment" value="Cash on Delivery (COD)" checked>
+                            <label for="pay-cod"><i class="fas fa-money-bill-wave"></i> Cash on Delivery</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="pay-gpay" name="payment" value="Google Pay (GPay)">
+                            <label for="pay-gpay"><i class="fab fa-google-pay"
+                                    style="font-size: 1.2rem; vertical-align: middle;"></i> Google Pay</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="pay-card" name="payment" value="Credit/Debit Card">
+                            <label for="pay-card"><i class="fas fa-credit-card"></i> Card</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="pay-net" name="payment" value="Net Banking">
+                            <label for="pay-net"><i class="fas fa-university"></i> Net Banking</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 mt-20">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div id="order-modal" class="modal-overlay">
+        <div class="modal-content order-success">
+            <i class="fas fa-check-circle success-icon"></i>
+            <h2>Order Placed Successfully!</h2>
+            <p>Thank you for shopping with us. Your order will be delivered soon.</p>
+            <p><strong>Payment Method:</strong> <span id="confirmed-payment-method">Cash on Delivery (COD)</span></p>
+            <button id="close-order-btn" class="btn btn-primary mt-20">Continue Shopping</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
